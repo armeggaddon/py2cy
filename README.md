@@ -162,7 +162,7 @@ Introducing **py2cy**, a powerful utility built on Cython to obfuscate and optim
 ## ⚙️ **How to Use py2cy**    
   
 ### 1️⃣ **Install py2cy**    
-Get started by installing py2cy directly from PyPI:    
+Get started by installing [py2cy](https://pypi.org/project/py2cy/) directly from PyPI:    
 ```bash    
 pip install py2cy    
 ```    

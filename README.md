@@ -96,7 +96,22 @@ Below are the list of tools or methods commonly used for Python code obfuscation
   - Converts Python code into `.exe` files.    
   - Provides basic obfuscation.    
 - **Learn More**: [Visit py2exe](https://www.py2exe.org)    
+
+ A handy summary of the top tools, their key features, and where to find them.    
   
+| **Tool**            | **Key Feature**                       | **Website/Repo**                  |    
+|---------------------|---------------------------------------|-----------------------------------|    
+| **PyArmor**         | Code encryption & runtime protection | [pyarmor.org](https://pyarmor.dashingsoft.com/) |    
+| **Cython**          | Converts Python to C extensions      | [cython.org](https://cython.org) |    
+| **pyminifier**      | Minifies & renames variables          | [GitHub](https://github.com/liftoff/pyminifier) |    
+| **pyobfuscate**     | Renames variables/methods             | [pyobfuscate.com](https://pyobfuscate.com/) |    
+| **PyInstaller**     | Converts scripts to executables       | [pyinstaller.org](https://pyinstaller.org) |    
+| **Nuitka**          | Python-to-C compiler                 | [nuitka.net](https://nuitka.net) |    
+| **CodeMorph**       | Advanced obfuscation techniques      | Commercial Tool                  |    
+| **Obfuscator.io**   | Online obfuscation service            | Obfuscator.io                    |    
+| **Custom Scripts**  | Fully customizable obfuscation        | N/A                              |    
+| **py2exe**          | Python-to-Windows executables         | [py2exe.org](https://www.py2exe.org) |    
+   
 ---  
    
 ## 🏆 **Top Open-Source Tools**: **Cython** & **Nuitka**    

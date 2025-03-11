@@ -1,0 +1,74 @@
+Metadata-Version: 2.2
+Name: py2cy
+Version: 0.0.1
+Summary: A package to convert Python code to Cython for Security and Obfuscation
+Author-email: Vaira Muthu Thangavel <vairamuthu.thangavel@gmail.com>
+Project-URL: Homepage, https://github.com/armeggaddon/py2cy
+Project-URL: Repository, https://github.com/armeggaddon/py2cy.git
+Keywords: cython,encryption,conversion,security,obfuscation,code protection,anti-reverse engineering,code integrity,cythonize,privacy,intellectual property,secure code,software protection,anti-tampering,transpiler,application security,deployment
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Cython>=3.0.2
+
+# 🗂️ py2cy 
+
+*py2cy is a library designed to convert Python source code into Cython format, enabling the transformation of .py files into .so files on Linux and .pyd files on Windows. Additionally, it aids in obfuscating the code, making reverse engineering more challenging.*
+
+## 🏃 Quickstart
+
+Installing the package
+
+```python
+pip install py2cy
+```	
+
+Arrange the configuration file setup.cfg for your projects
+
+```config
+######CYTHON CONFIGURATIONS######
+#threads for cythonize in linux
+[NThreads]
+nThreads=4
+
+#path of the folder to be obfuscated
+[SourcePath]
+pkg_for_obfuscation=<<path of the project to be obfuscated>>
+
+#files to be excluded from cythonization, comma separated values, must have file extension
+[FilesToExclude]
+files_to_exclude=abc.py,bde.py
+
+#comma separated values
+[PkgsToExclude]
+pkgs_to_exclude=package1,package2
+
+#If this is set, both exclude conditions metioned above will be ignored,#comma separated values
+[FilesToInclude]
+files_to_include=test1.py,test2.py
+
+#If this is set, both exclude conditions above will be ignored,#comma separated values
+[PkgsToInclude]
+pkgs_to_include=
+###############################
+```
+
+## ▶️ Execute
+
+After the above configuration invoke py2cy in the command line interface as below
+
+```python
+
+py2cy <<path of the setup.cfg>>
+
+or
+
+py2cy #invoke from the current working directory where setup.cfg is present
+```
+
+Once the execution gets completed, a package with same name suffixed with _cython gets generated next to the actual source code.
+
+Based on the configuration set in setup.cfg, respective files are cythonized.

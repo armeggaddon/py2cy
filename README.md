@@ -193,7 +193,17 @@ files_to_include = test1.py, test2.py
   
 [PkgsToInclude]    
 pkgs_to_include =    
-```    
+```
+### 🔍 Configuration Breakdown    
+  
+| **Configuration**         | **Purpose**                                                                 |  
+|---------------------------|-----------------------------------------------------------------------------|  
+| **nThreads**              | Speeds up the cythonization process on Linux by using multiple threads.     |  
+| **pkg_for_obfuscation**   | Specifies the absolute path of the project to be obfuscated.                |  
+| **files_to_exclude**      | Lists files (comma-separated) to exclude from obfuscation.                  |  
+| **pkgs_to_exclude**       | Lists packages to exclude from obfuscation (entire contents skipped).        |  
+| **files_to_include**      | Lists specific files to obfuscate (overrides exclusion settings).           |  
+| **pkgs_to_include**       | Lists specific packages to obfuscate (overrides exclusion settings).        |  
   
 ---  
    
@@ -201,7 +211,24 @@ pkgs_to_include =
 Execute py2cy via the command line:    
 ```bash    
 py2cy <<path to setup.cfg>>    
-```    
+```
+or 
+
+```bash    
+py2cy # run from the directory containing setup.cfg  
+```
+
+### 🎯 Output    
+Upon successful execution, py2cy generates a package with the same name as your source code, suffixed with `_cython`. The selected files and packages are obfuscated based on your `setup.cfg` configuration.  
+   
+---  
+   
+## 📌 Points to Remember    
+  
+- **Windows C++ Compiler**: Ensure you have an appropriate C++ compiler installed, such as Visual Studio Build Tools, as it is not bundled with Windows OS.    
+- **Linux GCC Compiler**: GCC is generally pre-installed and works seamlessly for py2cy.    
+- **Compression for Deployment**: py2cy uses efficient compression to reduce package size.    
+- **Performance Boost**: Enjoy faster runtime performance with Cython, though execution speed varies depending on code complexity.
   
 ---  
    
@@ -209,11 +236,6 @@ py2cy <<path to setup.cfg>>
 - **Code Security**: Protect your scripts with advanced obfuscation.    
 - **Performance Boost**: Enjoy faster runtime speeds with Cython optimization.    
 - **Customizable Configuration**: Tailor obfuscation to fit your project needs.    
-  
----  
-   
-## 🤝 **Join the py2cy Community**    
-Have suggestions or ideas? Join the community and contribute to improving py2cy!    
   
 ---  
    

@@ -1,8 +1,9 @@
  
 # 🔐 **Python Code Obfuscation Tools and Techniques**    
-Code obfuscation is the process of making code more difficult to understand or reverse-engineer, often for security or intellectual property protection purposes. In Python, there are several tools and techniques available for code obfuscation.
+Code obfuscation is the process of making code more difficult to understand or reverse-engineer, often for security or intellectual property protection purposes. In Python, there are several tools and techniques available for code obfuscation. 
 
-Below is a list of tools or methods commonly used for Python code obfuscation.
+Below are the list of tools or methods commonly used for Python code obfuscation
+
 ---  
    
 ## 🚀 **Top Python Code Obfuscation Tools**    
